@@ -24,3 +24,13 @@ Route::group(['prefix' => 'mechanics'], function(){
     Route::post('/new', 'MechanicController@save')->name('mechanic.save');
     Route::get('/delete/{id}', 'MechanicController@delete')->name('mechanic.delete');
 });
+
+
+
+
+Route::group(['prefix' => 'trucks'], function(){
+    Route::get('', 'TruckController@index')->name('truck.index');
+    Route::get('/new', 'TruckController@new')->name('truck.new');
+    Route::post('/new', 'TruckController@save')->name('truck.save');
+    Route::get('/delete/{id}', 'TruckController@delete')->name('truck.delete');
+});
