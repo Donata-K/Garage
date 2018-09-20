@@ -21,10 +21,17 @@ class MechanicRequest extends FormRequest
      *
      * @return array
      */
+    // public function rules()
+    // {
+    //     return [
+    //         //
+    //     ];
+    // }
     public function rules()
-    {
-        return [
-            //
-        ];
-    }
+{
+    return [
+        'mechanic_name' => 'required|alpha',
+        'mechanic_surname' => 'required|alpha',
+    ];
+}
 }

@@ -17,6 +17,7 @@ class Trucks extends Migration
             $table->increments('id');
             $table->string('maker',255);
             $table->string('plate',20);
+            // $table->tinyInteger('make_year')->unsigned();
             $table->tinyInteger('make_year')->unsigned();
             $table->text('mechanic_notices');
             $table->unsignedInteger('mechanic_id');

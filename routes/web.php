@@ -1,5 +1,7 @@
 <?php
 
+// use Symfony\Component\Routing\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,10 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::get('/', function(){
+    return redirect('mechanics');
+});
 
 
 
@@ -33,4 +39,10 @@ Route::group(['prefix' => 'trucks'], function(){
     Route::get('/new', 'TruckController@new')->name('truck.new');
     Route::post('/new', 'TruckController@save')->name('truck.save');
     Route::get('/delete/{id}', 'TruckController@delete')->name('truck.delete');
+    Route::get('/filter', 'TruckController@filter')->name('truck.filter');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
